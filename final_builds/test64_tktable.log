@@ -1,0 +1,39 @@
+TCL_LIBRARY=`echo /c/Tclbuild/build64/tcl8.6.4/library` TK_LIBRARY=`echo /c/Tclbuild/build64/tk8.6.4/library` LD_LIBRARY_PATH=".:/c/Tclbuild/Tcl64/lib:/c/Tclbuild/Tcl64/lib:" PATH=".:/c/Tclbuild/Tcl64/lib:/c/Tclbuild/Tcl64/lib:/usr/local/bin:/c/Rtools/mingw_64/bin/:/bin/" TCLLIBPATH="." /c/Tclbuild/Tcl64/bin/wish86.exe `echo ./tests/all.tcl`  | cat
+Tk 8.6.4 tests running in interp: c:/Tclbuild/Tcl64/bin/wish86.exe
+Tests running with pwd:           C:/Tclbuild/build64/tktable
+Tests running in working dir:     C:/Tclbuild/build64/tktable/tests
+Only running tests that match:        *
+Skipping test files that match:       l.*.test
+Only sourcing test files that match:  *.test
+Tests began at Thu Feb 18 20:43:54 +0100 2016
+tkTable.test
+
+
+==== table-1.92 configuration options, -relief FAILED
+==== Contents of test case:
+
+	    list [catch {.t configure $name [lindex $test 3]} msg] $msg
+	
+---- Result was:
+1 {bad relief "1.5": must be flat, groove, raised, ridge, solid, or sunken}
+---- Result should have been (exact matching):
+1 {bad relief type "1.5": must be flat, groove, raised, ridge, solid, or sunken}
+==== table-1.92 FAILED
+
+
+
+==== table-1.166 tag configuration options, -relief FAILED
+==== Contents of test case:
+
+	    list [catch {.t tag configure title $name [lindex $test 3]} msg] $msg
+	
+---- Result was:
+1 {bad relief "1.5": must be flat, groove, raised, ridge, solid, or sunken}
+---- Result should have been (exact matching):
+1 {bad relief type "1.5": must be flat, groove, raised, ridge, solid, or sunken}
+==== table-1.166 FAILED
+
+
+Tests ended at Thu Feb 18 20:43:54 +0100 2016
+all.tcl:	Total	225	Passed	223	Skipped	0	Failed	2
+Sourced 0 Test Files.
