@@ -23,7 +23,8 @@ cd /c/Tclbuild
 ~~~
 
 The logs and builds are then in the `final_build` folder. My builds
-can be also found on github in
+can be also found in this build in the `final_build` folder. Running
+the `tclbuild.sh` script will delete my build.
 
 
 
@@ -37,5 +38,4 @@ The sources can be found at the following urls
 * [`tktable-tktable.tar.gz`](http://tktable.cvs.sourceforge.net/viewvc/tktable/tktable/)([direct link](http://tktable.cvs.sourceforge.net/viewvc/tktable/tktable/?view=tar)). Note that
 this is from the cvs repository and version 2.11. The stable build
 is 2.10 but ActiveTcl also ships with 2.11 (although I am not sure
-which commit) .
-* 'tkimg142.zip' is currently not used
+which commit).
