@@ -27,6 +27,14 @@ can be also found in this build in the `final_build` folder. Running
 the `tclbuild.sh` script will delete my build.
 
 
+You can test the builds by running `wish86.exe` in `Tcl32/bin/` or
+`Tcl64/bin` and then by entering
+
+~~~
+source C:/Tclbuild/interactive_test_build.tcl
+~~~
+
+in the wish console.
 
 # URLs for sources
 
