@@ -115,7 +115,7 @@ cp /c/Tclbuild/build32/tktable/config.log "${final_builds}/config32_tktable.log"
 
 
 cd /c/Tclbuild
-/c/Rtools/bin/zip "${final_builds}/Tcl32.zip" Tcl32
+/c/Rtools/bin/zip -r "${final_builds}/Tcl32.zip" Tcl32
 
 start64=`date +%s`
 
@@ -179,7 +179,7 @@ cp /c/Tclbuild/build64/tktable/config.log "${final_builds}/config64_tktable.log"
 
 
 cd /c/Tclbuild
-/c/Rtools/bin/zip "${final_builds}/Tcl64.zip" Tcl64
+/c/Rtools/bin/zip -r "${final_builds}/Tcl64.zip" Tcl64
 
 end=`date +%s`
 
