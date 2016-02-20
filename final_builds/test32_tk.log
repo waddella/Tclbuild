@@ -17,7 +17,7 @@ Test files sourced into current interpreter
 Running tests that match:  *
 Skipping test files that match:  l.*.test
 Only running test files that match:  *.test
-Tests began at Thu Feb 18 20:17:37 +0100 2016
+Tests began at Sat Feb 20 09:48:05 +0100 2016
 bell.test
 Bell should ring now ...
 bgerror.test
@@ -35,6 +35,20 @@ canvWind.test
 canvas.test
 choosedir.test
 clipboard.test
+
+
+==== clipboard-4.2 ClipboardLostSel procedure FAILED
+==== Contents of test case:
+
+    clipboard append "Test"
+    clipboard append -t TEST "Test2"
+    selection clear -s CLIPBOARD
+    clipboard get
+
+---- Test completed normally; Return code was: 0
+---- Return code should have been one of: 1
+==== clipboard-4.2 FAILED
+
 clrpick.test
 cmds.test
 color.test
@@ -139,6 +153,25 @@ visual.test
 visual_bb.test
 winButton.test
 winClipboard.test
+
+
+==== winClipboard-1.2 TkSelGetSelection FAILED
+==== Contents of test case:
+
+    clipboard append {}
+    list [selection get -selection CLIPBOARD] [testclipboard]
+
+---- Test generated error; Return code was: 1
+---- Return code should have been one of: 0 2
+---- errorInfo: CLIPBOARD selection doesn't exist or form "STRING" not defined
+    while executing
+"testclipboard"
+    ("uplevel" body line 3)
+    invoked from within
+"uplevel 1 $script"
+---- errorCode: TK SELECTION EXISTS
+==== winClipboard-1.2 FAILED
+
 winDialog.test
 winFont.test
 winMenu.test
@@ -150,10 +183,10 @@ winfo.test
 wm.test
 xmfbox.test
 
-Tests ended at Thu Feb 18 20:19:08 +0100 2016
-all.tcl:	Total	9226	Passed	7932	Skipped	1292	Failed	2
+Tests ended at Sat Feb 20 09:49:35 +0100 2016
+all.tcl:	Total	9226	Passed	7930	Skipped	1292	Failed	4
 Sourced 91 Test Files.
-Files with failing tests: frame.test text.test
+Files with failing tests: clipboard.test frame.test text.test winClipboard.test
 Number of tests skipped for each constraint:
 	2	!win
 	7	altDisplay
@@ -188,7 +221,7 @@ Test files sourced into current interpreter
 Running tests that match:  *
 Skipping test files that match:  l.*.test
 Only running test files that match:  *.test
-Tests began at Thu Feb 18 20:19:08 +0100 2016
+Tests began at Sat Feb 20 09:49:36 +0100 2016
 checkbutton.test
 combobox.test
 entry.test
@@ -207,7 +240,7 @@ ttk.test
 validate.test
 vsapi.test
 
-Tests ended at Thu Feb 18 20:19:10 +0100 2016
+Tests ended at Sat Feb 20 09:49:37 +0100 2016
 all.tcl:	Total	457	Passed	443	Skipped	14	Failed	0
 Sourced 17 Test Files.
 Number of tests skipped for each constraint:

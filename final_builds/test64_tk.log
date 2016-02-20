@@ -17,7 +17,7 @@ Test files sourced into current interpreter
 Running tests that match:  *
 Skipping test files that match:  l.*.test
 Only running test files that match:  *.test
-Tests began at Thu Feb 18 20:41:39 +0100 2016
+Tests began at Sat Feb 20 10:11:13 +0100 2016
 bell.test
 Bell should ring now ...
 bgerror.test
@@ -150,7 +150,7 @@ winfo.test
 wm.test
 xmfbox.test
 
-Tests ended at Thu Feb 18 20:43:02 +0100 2016
+Tests ended at Sat Feb 20 10:12:46 +0100 2016
 all.tcl:	Total	9226	Passed	7932	Skipped	1292	Failed	2
 Sourced 91 Test Files.
 Files with failing tests: frame.test text.test
@@ -188,7 +188,7 @@ Test files sourced into current interpreter
 Running tests that match:  *
 Skipping test files that match:  l.*.test
 Only running test files that match:  *.test
-Tests began at Thu Feb 18 20:43:03 +0100 2016
+Tests began at Sat Feb 20 10:12:46 +0100 2016
 checkbutton.test
 combobox.test
 entry.test
@@ -201,34 +201,15 @@ progressbar.test
 radiobutton.test
 scrollbar.test
 spinbox.test
-
-
-==== spinbox-1.8.4 -validate option: FAILED
-==== Contents of test case:
-
-    .sb configure -validate all -validatecommand {lappend ::spinbox_test %P}
-    pack .sb
-    .sb set 50
-    focus .sb
-    after 500 {set ::spinbox_wait 1} ; vwait ::spinbox_wait
-    set ::spinbox_test
-
----- Result was:
-
----- Result should have been (exact matching):
-50
-==== spinbox-1.8.4 FAILED
-
 treetags.test
 treeview.test
 ttk.test
 validate.test
 vsapi.test
 
-Tests ended at Thu Feb 18 20:43:04 +0100 2016
-all.tcl:	Total	457	Passed	442	Skipped	14	Failed	1
+Tests ended at Sat Feb 20 10:12:48 +0100 2016
+all.tcl:	Total	457	Passed	443	Skipped	14	Failed	0
 Sourced 17 Test Files.
-Files with failing tests: spinbox.test
 Number of tests skipped for each constraint:
 	2	NA
 	4	coreEntry
