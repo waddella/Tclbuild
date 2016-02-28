@@ -19,7 +19,7 @@ Test files run in separate interpreters
 Running tests that match:  *
 Skipping test files that match:  l.*.test
 Only running test files that match:  *.test
-Tests began at Sat Feb 20 09:36:53 +0100 2016
+Tests began at Sun Feb 28 23:03:02 +0100 2016
 aaa_exit.test
 append.test
 appendComp.test
@@ -405,27 +405,6 @@ while.test
 winConsole.test
 winDde.test
 winFCmd.test
-
-
-==== winFCmd-1.38 TclpRenameFile: check rename of conflicting inodes FAILED
-==== Contents of test case:
-
-    file mkdir td1
-    foreach {a b} [MakeFiles td1] break
-    file rename -force $a $b
-    file exists $a
-
----- Test generated error; Return code was: 1
----- Return code should have been one of: 0 2
----- errorInfo: limit reached without finding a collistion.
-    while executing
-"MakeFiles td1"
-    ("uplevel" body line 3)
-    invoked from within
-"uplevel 1 $script"
----- errorCode: NONE
-==== winFCmd-1.38 FAILED
-
 winFile.test
 winNotify.test
 winPipe.test
@@ -438,39 +417,20 @@ You should see this
     exec [interpreter] $path(echoArgs.tcl) foo * makefile.?c bar
 
 ---- Result was:
-C:/Tclbuild/build32/tcl8.6.4/win/echoArgs.tcl {foo aclocal.m4 big bn_fast_s_mp_mul_digs.o bn_fast_s_mp_sqr.o bn_mp_add.o bn_mp_add_d.o bn_mp_and.o bn_mp_clamp.o bn_mp_clear.o bn_mp_clear_multi.o bn_mp_cmp.o bn_mp_cmp_d.o bn_mp_cmp_mag.o bn_mp_cnt_lsb.o bn_mp_copy.o bn_mp_count_bits.o bn_mp_div.o bn_mp_div_2.o bn_mp_div_2d.o bn_mp_div_3.o bn_mp_div_d.o bn_mp_exch.o bn_mp_expt_d.o bn_mp_grow.o bn_mp_init.o bn_mp_init_copy.o bn_mp_init_multi.o bn_mp_init_set.o bn_mp_init_set_int.o bn_mp_init_size.o bn_mp_karatsuba_mul.o bn_mp_karatsuba_sqr.o bn_mp_lshd.o bn_mp_mod.o bn_mp_mod_2d.o bn_mp_mul.o bn_mp_mul_2.o bn_mp_mul_2d.o bn_mp_mul_d.o bn_mp_neg.o bn_mp_or.o bn_mp_radix_size.o bn_mp_radix_smap.o bn_mp_read_radix.o bn_mp_rshd.o bn_mp_set.o bn_mp_set_int.o bn_mp_shrink.o bn_mp_sqr.o bn_mp_sqrt.o bn_mp_sub.o bn_mp_sub_d.o bn_mp_to_unsigned_bin.o bn_mp_to_unsigned_bin_n.o bn_mp_toom_mul.o bn_mp_toom_sqr.o bn_mp_toradix_n.o bn_mp_unsigned_bin_size.o bn_mp_xor.o bn_mp_zero.o bn_reverse.o bn_s_mp_add.o bn_s_mp_mul_digs.o bn_s_mp_sqr.o bn_s_mp_sub.o bncore.o buildall.vc.bat cat.c cat32.exe cat32.o coffbase.txt config.log config.status configure configure.in echoArgs.tcl libtcl86.a libtcldde14.a libtclreg13.a libtclstub86.a libtcltest86.a license.terms little Makefile makefile.bc Makefile.in makefile.vc more nmakehlp.c nothing pkgs README regcomp.o regerror.o regexec.o regfree.o rules.vc stderr stdout tcl.dsp tcl.dsw tcl.hpj tcl.hpj.in tcl.m4 tcl.rc tcl.res.o tcl86.dll TCL87B0.tmp TCL8C01.tmp tclAlloc.o tclAppInit.c tclAppInit.o tclAssembly.o tclAsync.o tclBasic.o tclBinary.o tclCkalloc.o tclClock.o tclCmdAH.o tclCmdIL.o tclCmdMZ.o tclCompCmds.o tclCompCmdsGR.o tclCompCmdsSZ.o tclCompExpr.o tclCompile.o tclConfig.o tclConfig.sh tclConfig.sh.in tclDate.o tcldde14.dll tclDictObj.o tclDisassemble.o tclEncoding.o tclEnsemble.o tclEnv.o tclEvent.o tclExecute.o tclFCmd.o tclFileName.o tclGet.o tclHash.o tclHistory.o tclIndexObj.o tclInterp.o tclIO.o tclIOCmd.o tclIOGT.o tclIORChan.o tclIORTrans.o tclIOSock.o tclIOUtil.o tclLink.o tclListObj.o tclLiteral.o tclLoad.o tclMain.o tclMain2.o tclNamesp.o tclNotify.o tclObj.o tclOO.o tclOOBasic.o tclOOCall.o tclooConfig.sh tclOODefineCmds.o tclOOInfo.o tclOOMethod.o tclOOStubInit.o tclOOStubLib.o tclOptimize.o tclPanic.o tclParse.o tclPathObj.o tclPipe.o tclPkg.o tclPkgConfig.o tclPosixStr.o tclPreserve.o tclProc.o tclreg13.dll tclRegexp.o tclResolve.o tclResult.o tclScan.o tclsh.exe.manifest tclsh.exe.manifest.in tclsh.ico tclsh.rc tclsh.res.o tclsh86.exe tclStringObj.o tclStrToD.o tclStubInit.o tclStubLib.o tclTest.o tcltest86.dll tclTestObj.o tclTestProcBodyObj.o tclThread.o tclThreadAlloc.o tclThreadJoin.o tclThreadStorage.o tclThreadTest.o tclTimer.o tclTomMathInterface.o tclTomMathStubLib.o tclTrace.o tclUtf.o tclUtil.o tclVar.o tclWin32Dll.c tclWin32Dll.o tclWinChan.c tclWinChan.o tclWinConsole.c tclWinConsole.o tclWinDde.c tclWinDde.o tclWinError.c tclWinError.o tclWinFCmd.c tclWinFCmd.o tclWinFile.c tclWinFile.o tclWinInit.c tclWinInit.o tclWinInt.h tclWinLoad.c tclWinLoad.o tclWinNotify.c tclWinNotify.o tclWinPipe.c tclWinPipe.o tclWinPort.h tclWinReg.c tclWinReg.o tclWinSerial.c tclWinSerial.o tclWinSock.c tclWinSock.o tclWinTest.c tclWinTest.o tclWinThrd.c tclWinThrd.o tclWinTime.c tclWinTime.o tclZlib.o tempchanfile test32_tcl.log zlib1.dll makefile.bc makefile.vc bar}
+C:/Tclbuild/build32/tcl8.6.4/win/echoArgs.tcl {foo aclocal.m4 big bn_fast_s_mp_mul_digs.o bn_fast_s_mp_sqr.o bn_mp_add.o bn_mp_add_d.o bn_mp_and.o bn_mp_clamp.o bn_mp_clear.o bn_mp_clear_multi.o bn_mp_cmp.o bn_mp_cmp_d.o bn_mp_cmp_mag.o bn_mp_cnt_lsb.o bn_mp_copy.o bn_mp_count_bits.o bn_mp_div.o bn_mp_div_2.o bn_mp_div_2d.o bn_mp_div_3.o bn_mp_div_d.o bn_mp_exch.o bn_mp_expt_d.o bn_mp_grow.o bn_mp_init.o bn_mp_init_copy.o bn_mp_init_multi.o bn_mp_init_set.o bn_mp_init_set_int.o bn_mp_init_size.o bn_mp_karatsuba_mul.o bn_mp_karatsuba_sqr.o bn_mp_lshd.o bn_mp_mod.o bn_mp_mod_2d.o bn_mp_mul.o bn_mp_mul_2.o bn_mp_mul_2d.o bn_mp_mul_d.o bn_mp_neg.o bn_mp_or.o bn_mp_radix_size.o bn_mp_radix_smap.o bn_mp_read_radix.o bn_mp_rshd.o bn_mp_set.o bn_mp_set_int.o bn_mp_shrink.o bn_mp_sqr.o bn_mp_sqrt.o bn_mp_sub.o bn_mp_sub_d.o bn_mp_to_unsigned_bin.o bn_mp_to_unsigned_bin_n.o bn_mp_toom_mul.o bn_mp_toom_sqr.o bn_mp_toradix_n.o bn_mp_unsigned_bin_size.o bn_mp_xor.o bn_mp_zero.o bn_reverse.o bn_s_mp_add.o bn_s_mp_mul_digs.o bn_s_mp_sqr.o bn_s_mp_sub.o bncore.o buildall.vc.bat cat.c cat32.exe cat32.o coffbase.txt config.log config.status configure configure.in echoArgs.tcl libtcl86.a libtcldde14.a libtclreg13.a libtclstub86.a libtcltest86.a license.terms little Makefile makefile.bc Makefile.in makefile.vc more nmakehlp.c nothing pkgs README regcomp.o regerror.o regexec.o regfree.o rules.vc stderr stdout tcl.dsp tcl.dsw tcl.hpj tcl.hpj.in tcl.m4 tcl.rc tcl.res.o tcl86.dll TCL9B4F.tmp TCL9FA0.tmp tclAlloc.o tclAppInit.c tclAppInit.o tclAssembly.o tclAsync.o tclBasic.o tclBinary.o tclCkalloc.o tclClock.o tclCmdAH.o tclCmdIL.o tclCmdMZ.o tclCompCmds.o tclCompCmdsGR.o tclCompCmdsSZ.o tclCompExpr.o tclCompile.o tclConfig.o tclConfig.sh tclConfig.sh.in tclDate.o tcldde14.dll tclDictObj.o tclDisassemble.o tclEncoding.o tclEnsemble.o tclEnv.o tclEvent.o tclExecute.o tclFCmd.o tclFileName.o tclGet.o tclHash.o tclHistory.o tclIndexObj.o tclInterp.o tclIO.o tclIOCmd.o tclIOGT.o tclIORChan.o tclIORTrans.o tclIOSock.o tclIOUtil.o tclLink.o tclListObj.o tclLiteral.o tclLoad.o tclMain.o tclMain2.o tclNamesp.o tclNotify.o tclObj.o tclOO.o tclOOBasic.o tclOOCall.o tclooConfig.sh tclOODefineCmds.o tclOOInfo.o tclOOMethod.o tclOOStubInit.o tclOOStubLib.o tclOptimize.o tclPanic.o tclParse.o tclPathObj.o tclPipe.o tclPkg.o tclPkgConfig.o tclPosixStr.o tclPreserve.o tclProc.o tclreg13.dll tclRegexp.o tclResolve.o tclResult.o tclScan.o tclsh.exe.manifest tclsh.exe.manifest.in tclsh.ico tclsh.rc tclsh.res.o tclsh86.exe tclStringObj.o tclStrToD.o tclStubInit.o tclStubLib.o tclTest.o tcltest86.dll tclTestObj.o tclTestProcBodyObj.o tclThread.o tclThreadAlloc.o tclThreadJoin.o tclThreadStorage.o tclThreadTest.o tclTimer.o tclTomMathInterface.o tclTomMathStubLib.o tclTrace.o tclUtf.o tclUtil.o tclVar.o tclWin32Dll.c tclWin32Dll.o tclWinChan.c tclWinChan.o tclWinConsole.c tclWinConsole.o tclWinDde.c tclWinDde.o tclWinError.c tclWinError.o tclWinFCmd.c tclWinFCmd.o tclWinFile.c tclWinFile.o tclWinInit.c tclWinInit.o tclWinInt.h tclWinLoad.c tclWinLoad.o tclWinNotify.c tclWinNotify.o tclWinPipe.c tclWinPipe.o tclWinPort.h tclWinReg.c tclWinReg.o tclWinSerial.c tclWinSerial.o tclWinSock.c tclWinSock.o tclWinTest.c tclWinTest.o tclWinThrd.c tclWinThrd.o tclWinTime.c tclWinTime.o tclZlib.o tempchanfile test32_tcl.log zlib1.dll makefile.bc makefile.vc bar}
 ---- Result should have been (exact matching):
 C:/Tclbuild/build32/tcl8.6.4/win/echoArgs.tcl {foo * makefile.?c bar}
 ==== winpipe-8.19 FAILED
 
 Warning: files left behind:
-	winPipe.test:	TCL87B0.tmp
+	winPipe.test:	TCL9B4F.tmp
 winTime.test
 zlib.test
 
-
-==== zlib-8.11 transformation and fconfigure FAILED
-==== Contents of test case:
-
-    zlib push deflate $outSide -dictionary $spdyDict
-    fconfigure $outSide -blocking 0 -translation binary -buffering none
-    fconfigure $inSide -blocking 0 -translation binary
-    puts -nonewline $outSide $spdyHeaders
-    chan pop $outSide
-    $strm put -dictionary $spdyDict [read $inSide]
-    list [string length $spdyHeaders] [string length [$strm get]]
-
----- Result was:
-358 0
----- Result should have been (exact matching):
-358 358
-==== zlib-8.11 FAILED
-
-
-Tests ended at Sat Feb 20 09:43:14 +0100 2016
-all.tcl:	Total	29299	Passed	28257	Skipped	1030	Failed	12
+Tests ended at Sun Feb 28 23:09:16 +0100 2016
+all.tcl:	Total	29299	Passed	28259	Skipped	1030	Failed	10
 Sourced 148 Test Files.
-Files with failing tests: chanio.test fileSystem.test io.test ioTrans.test tcltest.test winFCmd.test winPipe.test zlib.test
+Files with failing tests: chanio.test fileSystem.test io.test ioTrans.test tcltest.test winPipe.test
 Number of tests skipped for each constraint:
 	9	!ieeeFloatingPoint
 	2	RealConsole
@@ -565,7 +525,7 @@ Test files run in separate interpreters
 Running tests that match:  *
 Skipping test files that match:  l.*.test
 Only running test files that match:  *.test
-Tests began at Sat Feb 20 09:43:18 +0100 2016
+Tests began at Sun Feb 28 23:09:20 +0100 2016
 basic.test
 body.test
 chain.test
@@ -593,7 +553,7 @@ typevariable.test
 widgetadaptor.test
 widgetclass.test
 
-Tests ended at Sat Feb 20 09:43:20 +0100 2016
+Tests ended at Sun Feb 28 23:09:21 +0100 2016
 all.tcl:	Total	759	Passed	694	Skipped	65	Failed	0
 Sourced 26 Test Files.
 Number of tests skipped for each constraint:
@@ -614,10 +574,10 @@ Test files run in separate interpreters
 Running tests that match:  *
 Skipping test files that match:  l.*.test
 Only running test files that match:  *.test
-Tests began at Sat Feb 20 09:43:20 +0100 2016
+Tests began at Sun Feb 28 23:09:22 +0100 2016
 leapsecond.test
 
-Tests ended at Sat Feb 20 09:43:20 +0100 2016
+Tests ended at Sun Feb 28 23:09:22 +0100 2016
 all.tcl:	Total	1	Passed	1	Skipped	0	Failed	0
 Sourced 1 Test Files.
 make[1]: Leaving directory `/c/Tclbuild/build32/tcl8.6.4/win/pkgs/sqlite3.8.8.3'
@@ -632,7 +592,7 @@ Test files run in separate interpreters
 Running tests that match:  *
 Skipping test files that match:  l.*.test
 Only running test files that match:  *.test
-Tests began at Sat Feb 20 09:43:20 +0100 2016
+Tests began at Sun Feb 28 23:09:22 +0100 2016
 tdbc.test
 Test file error: couldn't read file "/c/Tclbuild/build32/tcl8.6.4/pkgs/tdbc1.0.3/library/tdbc.tcl": no such file or directory
     while executing
@@ -650,7 +610,7 @@ Test file error: couldn't read file "/c/Tclbuild/build32/tcl8.6.4/pkgs/tdbc1.0.3
 "package require tdbc"
     (file "C:/Tclbuild/build32/tcl8.6.4/pkgs/tdbc1.0.3/tests/tokenize.test" line 8)
 
-Tests ended at Sat Feb 20 09:43:21 +0100 2016
+Tests ended at Sun Feb 28 23:09:23 +0100 2016
 all.tcl:	Total	0	Passed	0	Skipped	0	Failed	0
 Sourced 2 Test Files.
 
@@ -676,7 +636,7 @@ Test files run in separate interpreters
 Running tests that match:  *
 Skipping test files that match:  l.*.test
 Only running test files that match:  *.test
-Tests began at Sat Feb 20 09:43:21 +0100 2016
+Tests began at Sun Feb 28 23:09:23 +0100 2016
 tdbcmysql.test
 Test file error: couldn't read file "/c/Tclbuild/build32/tcl8.6.4/pkgs/tdbcmysql1.0.3/library/tdbcmysql.tcl": no such file or directory
     while executing
@@ -686,7 +646,7 @@ Test file error: couldn't read file "/c/Tclbuild/build32/tcl8.6.4/pkgs/tdbcmysql
 "package require tdbc::mysql"
     (file "C:/Tclbuild/build32/tcl8.6.4/pkgs/tdbcmysql1.0.3/tests/tdbcmysql.test" line 17)
 
-Tests ended at Sat Feb 20 09:43:21 +0100 2016
+Tests ended at Sun Feb 28 23:09:23 +0100 2016
 all.tcl:	Total	0	Passed	0	Skipped	0	Failed	0
 Sourced 1 Test Files.
 
@@ -712,7 +672,7 @@ Test files run in separate interpreters
 Running tests that match:  *
 Skipping test files that match:  l.*.test
 Only running test files that match:  *.test
-Tests began at Sat Feb 20 09:43:22 +0100 2016
+Tests began at Sun Feb 28 23:09:24 +0100 2016
 tdbcodbc.test
 Test file error: couldn't read file "/c/Tclbuild/build32/tcl8.6.4/pkgs/tdbcodbc1.0.3/library/tdbcodbc.tcl": no such file or directory
     while executing
@@ -722,7 +682,7 @@ Test file error: couldn't read file "/c/Tclbuild/build32/tcl8.6.4/pkgs/tdbcodbc1
 "package require tdbc::odbc"
     (file "C:/Tclbuild/build32/tcl8.6.4/pkgs/tdbcodbc1.0.3/tests/tdbcodbc.test" line 16)
 
-Tests ended at Sat Feb 20 09:43:22 +0100 2016
+Tests ended at Sun Feb 28 23:09:24 +0100 2016
 all.tcl:	Total	0	Passed	0	Skipped	0	Failed	0
 Sourced 1 Test Files.
 
@@ -745,7 +705,7 @@ Test files run in separate interpreters
 Running tests that match:  *
 Skipping test files that match:  l.*.test
 Only running test files that match:  *.test
-Tests began at Sat Feb 20 09:43:22 +0100 2016
+Tests began at Sun Feb 28 23:09:24 +0100 2016
 tdbcodbc.test
 Test file error: couldn't read file "/c/Tclbuild/build32/tcl8.6.4/pkgs/tdbcodbc1.0.3/library/tdbcodbc.tcl": no such file or directory
     while executing
@@ -755,7 +715,7 @@ Test file error: couldn't read file "/c/Tclbuild/build32/tcl8.6.4/pkgs/tdbcodbc1
 "package require tdbc::odbc"
     (file "C:/Tclbuild/build32/tcl8.6.4/pkgs/tdbcodbc1.0.3/tests/tdbcodbc.test" line 16)
 
-Tests ended at Sat Feb 20 09:43:22 +0100 2016
+Tests ended at Sun Feb 28 23:09:24 +0100 2016
 all.tcl:	Total	0	Passed	0	Skipped	0	Failed	0
 Sourced 1 Test Files.
 
@@ -778,7 +738,7 @@ Test files run in separate interpreters
 Running tests that match:  *
 Skipping test files that match:  l.*.test
 Only running test files that match:  *.test
-Tests began at Sat Feb 20 09:43:22 +0100 2016
+Tests began at Sun Feb 28 23:09:24 +0100 2016
 tdbcodbc.test
 Test file error: couldn't read file "/c/Tclbuild/build32/tcl8.6.4/pkgs/tdbcodbc1.0.3/library/tdbcodbc.tcl": no such file or directory
     while executing
@@ -788,7 +748,7 @@ Test file error: couldn't read file "/c/Tclbuild/build32/tcl8.6.4/pkgs/tdbcodbc1
 "package require tdbc::odbc"
     (file "C:/Tclbuild/build32/tcl8.6.4/pkgs/tdbcodbc1.0.3/tests/tdbcodbc.test" line 16)
 
-Tests ended at Sat Feb 20 09:43:22 +0100 2016
+Tests ended at Sun Feb 28 23:09:24 +0100 2016
 all.tcl:	Total	0	Passed	0	Skipped	0	Failed	0
 Sourced 1 Test Files.
 
@@ -812,7 +772,7 @@ Test files run in separate interpreters
 Running tests that match:  *
 Skipping test files that match:  l.*.test
 Only running test files that match:  *.test
-Tests began at Sat Feb 20 09:43:23 +0100 2016
+Tests began at Sun Feb 28 23:09:25 +0100 2016
 tdbcpostgres.test
 Test file error: couldn't read file "/c/Tclbuild/build32/tcl8.6.4/pkgs/tdbcpostgres1.0.3/library/tdbcpostgres.tcl": no such file or directory
     while executing
@@ -822,7 +782,7 @@ Test file error: couldn't read file "/c/Tclbuild/build32/tcl8.6.4/pkgs/tdbcpostg
 "package require tdbc::postgres"
     (file "C:/Tclbuild/build32/tcl8.6.4/pkgs/tdbcpostgres1.0.3/tests/tdbcpostgres.test" line 15)
 
-Tests ended at Sat Feb 20 09:43:23 +0100 2016
+Tests ended at Sun Feb 28 23:09:25 +0100 2016
 all.tcl:	Total	0	Passed	0	Skipped	0	Failed	0
 Sourced 1 Test Files.
 
@@ -844,11 +804,11 @@ Tests running in working dir:  C:/Tclbuild/build32/tcl8.6.4/pkgs/tdbcsqlite3-1.0
 Only running tests that match:        *
 Skipping test files that match:       l.*.test
 Only sourcing test files that match:  *.test
-Tests began at Sat Feb 20 09:43:23 +0100 2016
+Tests began at Sun Feb 28 23:09:25 +0100 2016
 tdbcsqlite3.test
 couldn't read file "/c/Tclbuild/build32/tcl8.6.4/pkgs/tdbcsqlite3-1.0.3/library/tdbcsqlite3.tcl": no such file or directory
 
-Tests ended at Sat Feb 20 09:43:23 +0100 2016
+Tests ended at Sun Feb 28 23:09:25 +0100 2016
 all.tcl:	Total	0	Passed	0	Skipped	0	Failed	0
 Sourced 0 Test Files.
 make[1]: Leaving directory `/c/Tclbuild/build32/tcl8.6.4/win/pkgs/tdbcsqlite3-1.0.3'
@@ -862,15 +822,15 @@ Tests running in working dir:  C:/Tclbuild/build32/tcl8.6.4/pkgs/thread2.7.2/tes
 Only running tests that match:  *
 Skipping test files that match:  l.*.test
 Only sourcing test files that match:  *.test
-Tests began at Sat Feb 20 09:43:24 +0100 2016
+Tests began at Sun Feb 28 23:09:26 +0100 2016
 Thread 2.7.2
-Mainthread id is tid00003298
+Mainthread id is tid000042D8
 thread.test
 tpool.test
 tsv.test
 ttrace.test
 
-Tests ended at Sat Feb 20 09:43:39 +0100 2016
+Tests ended at Sun Feb 28 23:09:41 +0100 2016
 all.tcl:	Total	116	Passed	116	Skipped	0	Failed	0
 Sourced 0 Test Files.
 make[1]: Leaving directory `/c/Tclbuild/build32/tcl8.6.4/win/pkgs/thread2.7.2'
