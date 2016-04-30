@@ -10,12 +10,23 @@ This repository contains the build instructions and sources to compile
 [here](https://cran.r-project.org/bin/windows/Rtools/) and install it
 under `c:\Rtools`. Read more about gcc 4.9.3
 [here](https://github.com/rwinlib/r-base#readme).
+* Install msys2 (32bit or 64bit from [here](https://msys2.github.io/))
+  and install `make` & `tar` in `msys2` with
+
+        pacman -Sy
+        pacman -S make
+        pacman -S tar
+        pacman -S gettext
+
 * Clone this git repository into 'C:\Tclbuild'
 
 
 # Compile Tcl and Tk
 
-Run 'msys.bat' and enter
+
+
+
+Run 'msys2_shell.bat' and enter
 
 ~~~
 cd /c/Tclbuild

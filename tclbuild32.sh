@@ -7,13 +7,13 @@ unzip="/c/Rtools/bin/unzip"
 tclbuild=/c/Tclbuild/Tcl32
 final_builds="/c/Tclbuild/final_builds"
 
-
 mkdir build32
 
 $unzip tcl864-src.zip -d build32
 $unzip tk864-src.zip -d build32
 
-export PATH=/usr/local/bin:/c/Rtools/mingw_32/bin/:/bin/
+export PATH=/usr/local/bin:/bin:/usr/bin:/opt/bin:/c/Rtools/mingw_32/bin
+hash -r
 
 ## tcl
 cd /c/Tclbuild/build32/tcl8.6.4/win

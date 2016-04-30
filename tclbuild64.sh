@@ -20,7 +20,9 @@ mkdir build64
 $unzip tcl864-src.zip -d build64
 $unzip tk864-src.zip -d build64
 
-export PATH=/usr/local/bin:/c/Rtools/mingw_64/bin/:/bin/
+export PATH=/mingw64/bin:/usr/local/bin:/c/Rtools/mingw_64/bin:/bin:/usr/bin:/opt/bin
+hash -r
+
 
 ## tcl
 cd /c/Tclbuild/build64/tcl8.6.4/win
@@ -53,7 +55,7 @@ mv "${bwlib}/bwidget-1.9.9" "${bwlib}/BWidget"
 ## tktable
 tar -zxvf tktable-tktable.tar.gz --directory build64
 cd /c/Tclbuild/build64/tktable
-./configure --prefix=$libdir --with-tcl=$libdir --with-tk=$libdir
+./configure --prefix=$libdir --with-tcl=$libdir --with-tk=$libdir --with-tk=$libdir --enable-64bit --enable-threads
 make
 make test > test64_tktable.log
 make install

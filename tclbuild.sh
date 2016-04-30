@@ -40,10 +40,9 @@ fi
 
 for archive in tcl864-src.zip tk864-src.zip bwidget-1.9.9.zip tktable-tktable.tar.gz
 do
-    if [ ! -f $archive ]
+    if [ ! -f "$archive" ]
     then
-        echo "file $archive is missing run: git reset --hard HEAD (careful!)"
-        exit
+        echo "file $archive is missing run: git reset --hard HEAD (careful)"
     fi
 done
 

@@ -1,1 +1,0 @@
-TCL_LIBRARY=`echo /c/Tclbuild/build64/tcl8.6.4/library` TK_LIBRARY=`echo /c/Tclbuild/build64/tk8.6.4/library` LD_LIBRARY_PATH=".:/c/Tclbuild/Tcl64/lib64:/c/Tclbuild/Tcl64/lib64:" PATH=".:/c/Tclbuild/Tcl64/lib64:/c/Tclbuild/Tcl64/lib64:/usr/local/bin:/c/Rtools/mingw_64/bin/:/bin/" TCLLIBPATH="." wish86.exe `echo ./tests/all.tcl`  | cat
