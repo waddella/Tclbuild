@@ -53,7 +53,7 @@ mv "${bwlib}/bwidget-1.9.9" "${bwlib}/BWidget"
 ## tktable
 tar -zxvf tktable-tktable.tar.gz --directory build64
 cd /c/Tclbuild/build64/tktable
-./configure --prefix=$libdir --with-tcl=$libdir --with-tk=$libdir
+./configure --prefix=$libdir --with-tcl=$libdir --with-tk=$libdir --enable-64bit --libdir=$libdir
 make
 make test > test64_tktable.log
 make install
