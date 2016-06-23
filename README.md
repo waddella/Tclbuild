@@ -35,13 +35,13 @@ Note that running the `tclbuild.sh` script will delete the files in
 
 ## Test your Tcl/Tk build
 
-You can test the builds by running `wish86.exe` (wish console) in
+You can test the builds by running `wish86.exe` (wish console)
 
-* `C:/Tclbuild/Tcl32/bin/`
+* `C:/Tclbuild/Tcl32/bin/wish86.exe` and enter
 
         source C:/Tclbuild/interactive_test_build.tcl
 
-* `C:/Tclbuild/Tcl64/bin`
+* `C:/Tclbuild/Tcl64/bin/wish86.exe` and enter
 
         set auto_path [concat C:/Tclbuild/Tcl64/lib64 $auto_path]
         source C:/Tclbuild/interactive_test_build.tcl
