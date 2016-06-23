@@ -30,15 +30,20 @@ my builds on github in the `final_build` folder (`Tcl32.zip` and
 my build.
 
 
+## Test your Tcl/Tk build
+
 You can test the builds by running `wish86.exe` (wish console) in
 
 * `Tcl32/bin/`
+
         source C:/Tclbuild/interactive_test_build.tcl
-* `Tcl64/bin` 
+
+* `Tcl64/bin`
+
         set auto_path [concat C:/Tclbuild/Tcl64/lib64 $auto_path]
         source C:/Tclbuild/interactive_test_build.tcl
 
-The `auto_path` issue for the 64bit build is resolved when compiling
+The `auto_path` issue for the 64bit build gets resolved when compiling
 `R` with this `Tcl/Tk` build on Windows.
 
 
