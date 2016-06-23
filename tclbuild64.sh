@@ -69,4 +69,5 @@ cp /c/Tclbuild/build64/tktable/config.log "${final_builds}/config64_tktable.log"
 
 
 cd /c/Tclbuild
+rm -rf Tcl64/man Tcl64/share Tcl64/bin Tcl64/lib/*.a Tcl64/lib64/*.a Tcl64/lib/*/*.a Tcl64/lib64/*/*.a
 /c/Rtools/bin/zip -r "${final_builds}/Tcl64.zip" Tcl64

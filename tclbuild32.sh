@@ -61,4 +61,5 @@ cp /c/Tclbuild/build32/tktable/config.log "${final_builds}/config32_tktable.log"
 
 
 cd /c/Tclbuild
+rm -rf Tcl32/man Tcl32/share Tcl32/lib/*.a Tcl32/lib/*/*.a
 /c/Rtools/bin/zip -r "${final_builds}/Tcl32.zip" Tcl32

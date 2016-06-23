@@ -5,7 +5,7 @@ Tests running in working dir:     C:/Tclbuild/build32/tktable/tests
 Only running tests that match:        *
 Skipping test files that match:       l.*.test
 Only sourcing test files that match:  *.test
-Tests began at Sun Feb 28 23:16:35 +0100 2016
+Tests began at Thu Jun 23 10:50:56 +0200 2016
 tkTable.test
 
 
@@ -34,6 +34,6 @@ tkTable.test
 ==== table-1.166 FAILED
 
 
-Tests ended at Sun Feb 28 23:16:35 +0100 2016
+Tests ended at Thu Jun 23 10:50:57 +0200 2016
 all.tcl:	Total	225	Passed	223	Skipped	0	Failed	2
 Sourced 0 Test Files.

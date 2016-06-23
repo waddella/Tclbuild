@@ -1403,7 +1403,7 @@ configure:4726: $? = 0
 configure:4738: result: yes
 configure:4750: checking for intrinsics support in compiler
 configure:4778: gcc -o conftest.exe    conftest.c -lnetapi32 -lkernel32 -luser32 -ladvapi32 -lws2_32 >&5
-C:\Users\adrian\AppData\Local\Temp\ccCU3exN.o:conftest.c:(.text+0x26): undefined reference to `__cpuidex'
+C:\Users\adrian\AppData\Local\Temp\cccvhHfx.o:conftest.c:(.text+0x26): undefined reference to `__cpuidex'
 collect2.exe: error: ld returned 1 exit status
 configure:4784: $? = 1
 configure: failed program was:

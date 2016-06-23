@@ -7,34 +7,40 @@ This repository contains the build instructions and sources to compile
 # Setup
 
 * Download the newest R tools from
-[here](https://cran.r-project.org/bin/windows/Rtools/) and install it
-under `c:\Rtools`. Read more about gcc 4.9.3
-[here](https://github.com/rwinlib/r-base#readme).
+[here](https://cloud.r-project.org/bin/windows/Rtools/) and install it
+under `c:\Rtools`.
 * Clone this git repository into 'C:\Tclbuild'
-
+* Install msys v1 (which comes bundled with mingw) from
+  [here](http://www.mingw.org/). Install it under `C:/MinGW/`.
 
 # Compile Tcl and Tk
 
-Run 'msys.bat' and enter
+Start a msys terminal by running `C:/MinGW/msys/1.0/msys.bat` and
+enter
 
 ~~~
 cd /c/Tclbuild
 ./tclbuild.sh
 ~~~
 
-The logs and builds are then in the `final_build` folder. My builds
-can be also found in this build in the `final_build` folder. Running
-the `tclbuild.sh` script will delete my build.
+The logs and builds are then in the `final_build` folder. If you are
+not able to follow these compile instructions then you can also find
+my builds on github in the `final_build` folder (`Tcl32.zip` and
+`Tcl64.zip`). Note that running the `tclbuild.sh` script will delete
+my build.
 
 
-You can test the builds by running `wish86.exe` in `Tcl32/bin/` or
-`Tcl64/bin` and then by entering
+You can test the builds by running `wish86.exe` (wish console) in
 
-~~~
-source C:/Tclbuild/interactive_test_build.tcl
-~~~
+* `Tcl32/bin/`
+        source C:/Tclbuild/interactive_test_build.tcl
+* `Tcl64/bin` 
+        set auto_path [concat C:/Tclbuild/Tcl64/lib64 $auto_path]
+        source C:/Tclbuild/interactive_test_build.tcl
 
-in the wish console.
+The `auto_path` issue for the 64bit build is resolved when compiling
+`R` with this `Tcl/Tk` build on Windows.
+
 
 # URLs for sources
 

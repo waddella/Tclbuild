@@ -516,7 +516,7 @@ configure:11153: $? = 0
 configure:11168: result: yes
 configure:11183: checking for open64
 configure:11239: gcc -o conftest.exe  -pipe    conftest.c  >&5
-C:\Users\adrian\AppData\Local\Temp\ccIgqtKf.o:conftest.c:(.text+0xc): undefined reference to `open64'
+C:\Users\adrian\AppData\Local\Temp\ccVIWms0.o:conftest.c:(.text+0xc): undefined reference to `open64'
 collect2.exe: error: ld returned 1 exit status
 configure:11246: $? = 1
 configure: failed program was:
