@@ -23,22 +23,25 @@ cd /c/Tclbuild
 ./tclbuild.sh
 ~~~
 
-The logs and builds are then in the `final_build` folder. If you are
-not able to follow these compile instructions then you can also find
-my builds on github in the `final_build` folder (`Tcl32.zip` and
-`Tcl64.zip`). Note that running the `tclbuild.sh` script will delete
-my build.
+After running the build script there will be a couple outputs
 
+* Logs and builds (archived and compressed: `Tcl32.zip` and
+`Tcl64.zip`) are in the `final_build` folder.
+* The `Tcl32` and `Tcl64` folders are the final builds (that get
+  compressed as mentioned in the above point)
+
+Note that running the `tclbuild.sh` script will delete the files in
+`final_build`.
 
 ## Test your Tcl/Tk build
 
 You can test the builds by running `wish86.exe` (wish console) in
 
-* `Tcl32/bin/`
+* `C:/Tclbuild/Tcl32/bin/`
 
         source C:/Tclbuild/interactive_test_build.tcl
 
-* `Tcl64/bin`
+* `C:/Tclbuild/Tcl64/bin`
 
         set auto_path [concat C:/Tclbuild/Tcl64/lib64 $auto_path]
         source C:/Tclbuild/interactive_test_build.tcl
